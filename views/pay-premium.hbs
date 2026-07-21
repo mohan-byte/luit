@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - Luitprise Nidhi Ltd.</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    {{> header}}
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Quick Pay Online</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-3 col-md-4">
+                        <a href="/payments/renewal" class="payment-option-card">
+                            <img src="/images/renewal.png" alt="Renewal Premium" class="icon">
+                            <h5>Renewal Premium</h5>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <a href="/payments/loan-emi" class="payment-option-card">
+                             <img src="/images/loan-emi.png" alt="Loan EMI" class="icon">
+                            <h5>Loan EMI Pay</h5>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <a href="/payments/receipts" class="payment-option-card">
+                             <img src="/images/receipt.png" alt="Receipt" class="icon">
+                            <h5>View/Download Receipt</h5>
+                        </a>
+                    </div>
+                </div>
+                 <div class="text-center mt-5">
+                    <a href="/" class="back-btn btn-back-secondary">Back to Home</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    {{> footer}}
+    <script src="/js/main.js"></script>
+    {{> chatbot}}
+</body>
+</html>

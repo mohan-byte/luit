@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - Luitprise Nidhi Ltd.</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    {{> header}}
+
+    <main>
+        <section class="section bg-light text-center">
+            <div class="container">
+                <h1 class="section-title">About Luitprise Nidhi Limited</h1>
+                <p class="lead col-lg-8 mx-auto">We are a trusted financial partner, dedicated to fostering financial stability and growth within our community through transparent and member-centric services.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body p-4">
+                                <h4 class="card-title">Our Mission & Vision</h4>
+                                <p class="card-text"><strong>Mission:</strong> To encourage the habit of thrift and provide financial services to our members, ensuring mutual growth and prosperity.</p>
+                                <p class="card-text"><strong>Vision:</strong> To be the leading Nidhi company in the region, recognized for our commitment to member satisfaction and ethical practices.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body p-4">
+                                <h4 class="card-title">Registration Details</h4>
+                                <p>Luitprise Nidhi Limited is a public company incorporated under the Companies Act, 2013.</p>
+                                <ul class="list-unstyled">
+                                    <li><strong>CIN:</strong> U65990AS2019PLC019428</li>
+                                    <li><strong>ROC:</strong> RoC-Shillong</li>
+                                    <li><strong>Reg. Number</strong> 019428</li>
+                                    <li><strong>Status:</strong> Approved & Active</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Meet Our Team</h2>
+
+      <h3 class="text-center mb-4">Board of Directors</h3>
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-3 col-md-6">
+          <div class="team-card">
+            <img src="/images/person.png" alt="Subhash Borah" class="team-img">
+            <h5 class="team-name">Subhash Borah</h5>
+            <p class="team-title">Director</p>
+            <button class="team-btn" onclick="openPopup('Subhash Borah','Director','+91 98765 43210','subhash@luitprise.com')">View Details</button>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="team-card">
+            <img src="/images/person.png" alt="Subrat Borah" class="team-img">
+            <h5 class="team-name">Subrat Borah</h5>
+            <p class="team-title">Director</p>
+            <button class="team-btn" onclick="openPopup('Subrat Borah','Director','+91 98765 43211','subrat@luitprise.com')">View Details</button>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="team-card">
+            <img src="/images/person.png" alt="Uddipta Saikia" class="team-img">
+            <h5 class="team-name">Uddipta Saikia</h5>
+            <p class="team-title">Director</p>
+            <button class="team-btn" onclick="openPopup('Uddipta Saikia','Director','+91 98765 43212','uddipta@luitprise.com')">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="text-center mt-5 pt-4 mb-4">Technical Staff</h3>
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-3 col-md-6">
+          <div class="team-card">
+            <img src="/images/person.png" alt="Manab Dowarah" class="team-img">
+            <h5 class="team-name">Manab Dowarah</h5>
+            <p class="team-title">Lead Developer</p>
+            <button class="team-btn" onclick="openPopup('Manab Dowarah','Lead Developer','+91 98765 43213','manab@luitprise.com')">View Details</button>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="team-card">
+            <img src="/images/person.png" alt="UI/UX Designer" class="team-img">
+            <h5 class="team-name">Ankita Sharma</h5>
+            <p class="team-title">UI/UX Designer</p>
+            <button class="team-btn" onclick="openPopup('Ankita Sharma','UI/UX Designer','+91 98765 43214','ankita@luitprise.com')">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<div class="overlay" id="popupOverlay">
+    <div class="details">
+      <h3 id="popupName"></h3>
+      <p id="popupRole"></p>
+      <p><strong>Phone:</strong> <span id="popupPhone"></span></p>
+      <p><strong>Email:</strong> <span id="popupEmail"></span></p>
+      <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+    </main>
+
+    {{> footer}}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+    function openPopup(name, role, phone, email) {
+      document.getElementById("popupName").innerText = name;
+      document.getElementById("popupRole").innerText = role;
+      document.getElementById("popupPhone").innerText = phone;
+      document.getElementById("popupEmail").innerText = email;
+      document.getElementById("popupOverlay").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popupOverlay").style.display = "none";
+    }
+  </script>
+
+    {{> chatbot}}
+</body>
+</html>

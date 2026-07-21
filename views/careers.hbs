@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{title}} - Luitprise Nidhi Ltd.</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    {{> header}}
+
+    <main>
+        <section class="section careers-header text-white text-center">
+            <div class="container">
+                <h1 class="display-4">Join Our Team</h1>
+                <p class="lead">Be a part of a dynamic team dedicated to financial excellence and community growth.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Why Work With Us?</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="value-card">
+                            <div class="icon"><i class="bi bi-people-fill"></i></div>
+                            <h4>Community Focus</h4>
+                            <p>Make a real impact by helping members of our community achieve their financial goals.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="value-card">
+                            <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
+                            <h4>Growth Opportunities</h4>
+                            <p>We invest in our employees' growth with continuous learning and career advancement paths.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="value-card">
+                            <div class="icon"><i class="bi bi-lightbulb-fill"></i></div>
+                            <h4>Innovative Culture</h4>
+                            <p>Be part of an innovative environment that encourages new ideas and values every voice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="section-title text-start">Current Openings</h2>
+                        <div class="accordion" id="jobOpenings">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                        Field Officer
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#jobOpenings">
+                                    <div class="accordion-body">
+                                        <strong>Location:</strong> Tinsukia, Assam<br>
+                                        <strong>Description:</strong> Responsible for member outreach, onboarding, and managing loan applications. Requires strong communication skills.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                        Customer Support Executive
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#jobOpenings">
+                                    <div class="accordion-body">
+                                        <strong>Location:</strong> Guwahati, Assam<br>
+                                        <strong>Description:</strong> Provide excellent customer service to our members via phone and email, resolving queries and providing information.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <h4 class="mt-4">Departmental Growth</h4>
+                        <img src="/images/roadmap.png" alt="Departmental Growth">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+    <div class="container text-center">
+        <h2 class="section-title">Apply Now</h2>
+        <p class="lead mb-4">Interested in joining our team? Click the button below to open the application form.</p>
+        <a href="{{formUrl}}" class="btn btn-primary btn-lg" target="_blank">Open Application Form</a>
+    </div>
+</section>
+    </main>
+
+    {{> footer}}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+    
+    {{> chatbot}}
+</body>
+</html>

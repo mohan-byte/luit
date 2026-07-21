@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - Luitprise Nidhi Ltd.</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    {{> header}}
+    <main class="section">
+      <div class="container">
+        <div class="card col-md-10 mx-auto p-4 p-md-5 shadow-sm">
+          <h2 class="text-center mb-4">Loan Application: {{planName}}</h2>
+          <!-- Step Indicator -->
+          <div class="step-indicator">
+            <div class="step active" id="step-1">
+              <div class="step-icon">
+                <i class="bi bi-person-fill"></i>
+              </div>
+              <p>Basic Details</p>
+            </div>
+            <div class="step" id="step-2">
+              <div class="step-icon">
+                <i class="bi bi-bank"></i>
+              </div>
+              <p>Financial Details</p>
+            </div>
+            <div class="step" id="step-3">
+              <div class="step-icon">
+                <i class="bi bi-cloud-upload-fill"></i>
+              </div>
+              <p>Documents</p>
+            </div>
+          </div>
+          <form action="/apply/{{planSlug}}/submit" method="POST" enctype="multipart/form-data" id="multi-step-form">
+            <input type="hidden" name="planName" value="{{planName}}">
+            <!-- Step 1: Basic & Address Details -->
+            <div class="form-step active">
+              <h4 class="mb-3">Personal Details</h4>
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  <input type="text" class="form-control" name="firstName" placeholder="First Name *" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <input type="text" class="form-control" name="middleName" placeholder="Middle Name">
+                </div>
+                <div class="col-md-4 mb-3">
+                  <input type="text" class="form-control" name="lastName" placeholder="Last Name *" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="date" class="form-control" name="dob" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input type="tel" class="form-control" name="mobile" placeholder="Mobile Number *" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="email" class="form-control" name="email" placeholder="Email ID *" required>
+                </div>
+              </div>
+              <h4 class="mb-3 mt-3">Address</h4>
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  <select class="form-select" name="state" id="state-select" required>
+                    <option value="">Select State *</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <select class="form-select" name="district" id="district-select" required disabled>
+                    <option value="">Select District *</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <input type="text" class="form-control" name="pincode" placeholder="Pincode *" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="text" class="form-control" name="street" placeholder="Street Address *" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="text" class="form-control" name="houseNo" placeholder="House No. / Village *" required>
+                </div>                            
+              </div>
+              <div class="text-end">
+                <button type="button" class="btn btn-next next-btn">Next</button>
+              </div>
+            </div>
+            <!-- Step 2: Financial Details -->
+            <div class="form-step">
+              <h4 class="mb-3">Financial Information</h4>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <input type="number" class="form-control" name="annualIncome" placeholder="Annual Income (₹) *" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="text" class="form-control" name="panNumber" placeholder="PAN Number *" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="text" class="form-control" name="aadhaarNumber" placeholder="Aadhaar Number *" required>
+                </div>
+              </div>
+              <h4 class="mb-3 mt-3">Bank Details</h4>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <select class="form-select" name="bankName" required>
+                    <option>Select Bank</option>
+                    <option>State Bank of India</option>
+                    <option>HDFC Bank</option>
+                    <option>Axis Bank</option>
+                    <option>ICICI Bank</option>
+                    <option>Assam Gramin Bank</option>
+                    <option>PNB</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="text" class="form-control" name="accountNumber" placeholder="Account Number *" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="text" class="form-control" name="ifscCode" placeholder="IFSC Code *" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="text" class="form-control" name="branchName" placeholder="Branch Name *" required>
+                </div>
+              </div>
+              <div class="text-end">
+                <button type="button" class="btn btn-secondary prev-btn">Previous</button>
+                <button type="button" class="btn btn-next next-btn">Next</button>
+              </div>
+            </div>
+            <!-- Step 3: Document Upload -->
+            <div class="form-step">
+              <h4 class="mb-3">Document Upload</h4>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="aadhaarCard" class="form-label">
+                    Aadhaar Card *
+                    <i class="bi bi-info-circle" data-bs-toggle="popover" data-bs-trigger="hover" title="File Requirements" data-bs-content="Max size: 500KB. Allowed formats: png, jpg, pdf."></i>
+                    </label>
+                    <input type="file" class="form-control" name="aadhaarCard" accept=".png,.jpg,.jpeg,.pdf" required>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="panCard" class="form-label">
+                    PAN Card *
+                    <i class="bi bi-info-circle" data-bs-toggle="popover" data-bs-trigger="hover" title="File Requirements" data-bs-content="Max size: 500KB. Allowed formats: png, jpg, pdf."></i>
+                    </label>
+                    <input type="file" class="form-control" name="panCard" accept=".png,.jpg,.jpeg,.pdf" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="passbook" class="form-label">
+                    Bank Passbook *
+                    <i class="bi bi-info-circle" data-bs-toggle="popover" data-bs-trigger="hover" title="File Requirements" data-bs-content="Max size: 500KB. Allowed formats: png, jpg, pdf."></i>
+                    </label>
+                    <input type="file" class="form-control" name="passbook" accept=".png,.jpg,.jpeg,.pdf" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="voterCard" class="form-label">
+                    Voter Card *
+                    <i class="bi bi-info-circle" data-bs-toggle="popover" data-bs-trigger="hover" title="File Requirements" data-bs-content="Max size: 500KB. Allowed formats: png, jpg, pdf."></i>
+                    </label>
+                    <input type="file" class="form-control" name="voterCard" accept=".png,.jpg,.jpeg,.pdf" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="passportPhoto" class="form-label">
+                    Passport Size Photo *
+                    <i class="bi bi-info-circle" data-bs-toggle="popover" data-bs-trigger="hover" title="File Requirements" data-bs-content="Max size: 500KB. Allowed formats: png, jpg."></i>
+                    </label>
+                    <input type="file" class="form-control" name="passportPhoto" accept=".png,.jpg,.jpeg" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="signature" class="form-label">
+                    Signature *
+                    <i class="bi bi-info-circle" data-bs-toggle="popover" data-bs-trigger="hover" title="File Requirements" data-bs-content="Max size: 500KB. Allowed formats: png, jpg."></i>
+                    </label>
+                    <input type="file" class="form-control" name="signature" accept=".png,.jpg,.jpeg" required>
+                </div>
+              </div>
+              <div class="text-end mt-4">
+                <button type="button" class="btn btn-secondary prev-btn">Previous</button>
+                <button type="submit" class="btn btn-next">Submit Application</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    {{> footer}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+    {{> chatbot}}
+  </body>
+</html>

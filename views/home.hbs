@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - Luitprise Nidhi Ltd.</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    {{> header}}
+
+    <main>
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="hero-slide" style="background-image: url('/images/1.jpg');">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Secure Your Savings with High Returns</h2>
+                            <p>Our deposit schemes are designed to grow your wealth with guaranteed returns and complete peace of mind.</p>
+                            <a href="/services" class="btn btn-primary btn-lg mt-3">Explore Deposit Schemes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('/images/1.jpg');">
+                         <div class="carousel-caption d-none d-md-block">
+                            <h2>Achieve Your Dreams with Our Loans</h2>
+                            <p>Get quick and easy access to funds with our flexible loan options and competitive interest rates.</p>
+                             <a href="/services" class="btn btn-primary btn-lg mt-3">Discover Loan Options</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('/images/1.jpg');">
+                         <div class="carousel-caption d-none d-md-block">
+                            <h2>Become a Part of the Luitprise Family</h2>
+                            <p>Join a community of members benefiting from mutual growth and financial support.</p>
+                             <a href="/register" class="btn btn-primary btn-lg mt-3">Become a Member</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Our Financial Products</h2>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card text-center" id="deposit-card">
+                            <div class="icon"><i class="bi bi-wallet2"></i></div>
+                            <h3>Deposit Schemes</h3>
+                            <p>Secure your savings with our attractive and reliable deposit schemes. Enjoy high returns and peace of mind.</p>
+                            <button class="btn btn-outline-primary mt-auto" data-target-id="deposits-content">See more</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card text-center" id="loan-card">
+                            <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                            <h3>Loan Schemes</h3>
+                            <p>Achieve your goals with our flexible and affordable loan products, designed for your personal and business needs.</p>
+                            <button class="btn btn-outline-primary mt-auto" data-target-id="loans-content">See more</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card text-center" id="savings-card">
+                            <div class="icon"><i class="bi bi-piggy-bank"></i></div>
+                            <h3>Savings Plans</h3>
+                            <p>Start your journey towards financial discipline with our customized savings plans for a brighter tomorrow.</p>
+                            <button class="btn btn-outline-primary mt-auto" data-target-id="savings-content">See more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="product-categories" class="container-fluid bg-light py-5 d-none">
+            <div class="container">
+
+                <div id="deposits-content" class="product-category-content d-none">
+                    <div class="row g-4 mb-4">
+                        <h3 class="text-center">Fixed Deposit Plans</h3>
+                        <div class="col-md-6">
+                            <div class="product-card">
+                                <h4>Fixed Deposit (FD)</h4>
+                                <p>A secure way to invest a lump sum for a fixed period with guaranteed returns.</p>
+                                <button class="btn btn-primary mt-3">Apply Now</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product-card">
+                                <h4>Recurring Deposit (RD)</h4>
+                                <p>Ideal for regular savings with high-interest returns and a flexible tenure.</p>
+                                <button class="btn btn-primary mt-3">Apply Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="loans-content" class="product-category-content d-none">
+                    <div class="row g-4 mb-4">
+                        <h3 class="text-center">Personal & Gold Loans</h3>
+                        <div class="col-md-6">
+                            <div class="product-card">
+                                <h4>Gold Loan</h4>
+                                <p>Get quick and easy funds against your gold ornaments with minimal documentation.</p>
+                                <button class="btn btn-primary mt-3">Apply Now</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product-card">
+                                <h4>Personal Loan</h4>
+                                <p>Fulfill your financial needs with our hassle-free personal loans and competitive interest.</p>
+                                <button class="btn btn-primary mt-3">Apply Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="savings-content" class="product-category-content d-none">
+                     <div class="row g-4 mb-4">
+                        <h3 class="text-center">Special Savings Plans</h3>
+                        <div class="col-md-6">
+                            <div class="product-card">
+                                <h4>Child Savings Plan</h4>
+                                <p>A disciplined way to save for your child's future education and milestones.</p>
+                                <button class="btn btn-primary mt-3">Apply Now</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product-card">
+                                <h4>Retirement Savings</h4>
+                                <p>Build a strong retirement fund with our plans, ensuring financial freedom in your golden years.</p>
+                                <button class="btn btn-primary mt-3">Apply Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section stats-section">
+            <div class="container">
+                <h2 class="section-title text-white">Our Strength in Numbers</h2>
+                <div class="row text-center text-white">
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <h3 class="counter-value" data-target="7"></h3>
+                            <p>Years of Trust</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <h3 class="counter-value" data-target="1000"></h3>
+                            <p>Happy Members</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <h3 class="counter-value" data-target="99"></h3>
+                            <p>Loan Approval %</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <h3 class="counter-value" data-target="20"></h3>
+                            <p>Schemes Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!--Available-->
+        <section class="section">
+    <div class="container">
+        <h2 class="section-title">Our Available Places in Assam</h2>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="place-card text-center">
+                    <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                    <h3>Tinsukia</h3>
+                    <p>Explore our financial services across Tinsukia.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="place-card text-center">
+                    <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                    <h3>Dibrugarh</h3>
+                    <p>Explore our financial services across Dibrugarh.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="place-card text-center">
+                    <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                    <h3>Sivsagar</h3>
+                    <p>Explore our financial services across Sivsagar.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="place-card text-center">
+                    <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                    <h3>Moranhat</h3>
+                    <p>Explore our financial services across Moranhat.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="place-card text-center">
+                    <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                    <h3>Jorhat</h3>
+                    <p>Explore our financial services across Jorhat.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="place-card text-center">
+                    <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                    <h3>Guwahati</h3>
+                    <p>Explore our financial services across Guwahati.</p>
+                </div>
+            </div>
+            </div>
+    </div>
+</section>
+<!--Available-->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Financial Calculators</h2>
+                <p class="text-center lead mb-5">Plan your finances effectively with our easy-to-use tools.</p>
+                <div class="row justify-content-center g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card">
+                            <div class="icon"><i class="bi bi-calculator"></i></div>
+                            <h3>Loan EMI Calculator</h3>
+                            <p>Calculate your Equated Monthly Installment (EMI) for upcoming loans to plan your budget.</p>
+                            <a href="/loan-emi-calculator" class="btn-boxed">Calculate Loan EMI</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card">
+                            <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
+                            <h3>Deposit Maturity Calculator</h3>
+                            <p>Estimate the maturity amount and interest you will earn on your deposit investments.</p>
+                            <a href="/deposit-maturity-calculator" class="btn-boxed">Calculate Deposit Maturity</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!--Mobile Apps-->
+
+<section class="section app-promo-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-content">
+                <h2 class="section-title text-start">Luitprise in Your Pocket</h2>
+                <p class="lead">Get instant access to your account, manage your plans, and stay updated with our secure mobile app.</p>
+                <ul class="list-unstyled mt-4">
+                    <li><i class="bi bi-check-circle-fill"></i> View Plan Details & History</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Premium Payment Reminders</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Apply for New Schemes</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Secure & Instant Access</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="app-download-box">
+                    <div class="qr-code-box">
+                        <img src="/images/scan2.png" alt="Scan QR code" class="qr-code-img">
+                        <p class="mt-2 mb-2"><strong>Download now</strong></p>
+                        <div class="store-buttons">
+                            <a href="#"><img src="/images/play-store2.png" alt="Get it on Google Play"></a>
+                            <a href="#"><img src="/images/app-store2.png" alt="Download on the App Store"></a>
+                        </div>
+                    </div>
+                    <div class="mobile-image-box">
+                        <img src="/images/mobile-app.png" alt="Luitprise Mobile App" class="mobile-app-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Mobile-->
+
+<!--Partner-->
+<section class="section partner-section">
+    <div class="container">
+        <h2 class="section-title">Our Valued Partners</h2>
+        <div class="logos-container">
+            <div class="partner-box"><img src="/images/sbi.jpg" alt="SBI"></div>
+            <div class="partner-box"><img src="/images/agvb.jpg" alt="AGVB"></div>
+            <div class="partner-box"><img src="/images/pnb.png" alt="PNB"></div>
+            <div class="partner-box"><img src="/images/lic.png" alt="LIC"></div>
+        </div>
+    </div>
+</section>
+<!--Partner-->
+
+<!--Help Line-->
+<section class="section help-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="section-title text-start">Have a question?</h2>
+                <p>Our friendly customer support team is your extended family. Speak your heart out. They listen with undivided attention to resolve your concerns. Give us a call, request a callback or drop us an email, we’re here to help.</p>
+
+                <div class="d-flex mt-4">
+                    <div class="info-card">
+                        <i class="bi bi-envelope"></i>
+                        <p>General Enquiries</p>
+                        <small><a href="mailto:info@luitprise.com" class="contact-link">info@luitprise.com</a></small>
+                    </div>
+                    <div class="info-card">
+                        <i class="bi bi-telephone"></i>
+                        <p>Customer Support</p>
+                        <small><a href="tel:+919371160678" class="contact-link">+91 9371160678</a></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                <img src="/images/talk-to-expert-2.png" alt="Customer support team helping" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+<!--Help Line-->
+
+        <section class="section cta-section text-center text-white">
+            <div class="container">
+                <h2>Ready to start your financial journey with us?</h2>
+                <p class="lead my-3">Join Luitprise Nidhi Limited today and take the first step towards a secure future.</p>
+                <a href="/register" class="btn btn-light btn-lg">Become a Member Now</a>
+            </div>
+        </section>
+
+    </main>
+    {{> footer}}
+    {{> chatbot}}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+
+<div id="chat-widget-container">
+    <button id="chat-toggle-button" class="btn btn-primary rounded-circle shadow-lg">
+        <i class="bi bi-chat-dots-fill"></i>
+    </button>
+
+    <div id="chat-widget" class="d-none shadow-lg">
+        <div class="chat-header">
+            <h5>Luitprise Assistant</h5>
+            <button id="chat-close-button" type="button" class="btn-close"></button>
+        </div>
+        <div id="chat-messages" class="chat-body">
+            <div class="message bot-message">
+                {{#if user}}
+                    <p>Hello, {{user.name}}! How can I help you today?</p>
+                {{else}}
+                    <p>Hello! How can I help you today?</p>
+                {{/if}}
+            </div>
+        </div>
+        <div id="chat-options" class="chat-footer">
+            <button class="chat-option" data-option="deposit_info">Deposit Schemes</button>
+            <button class="chat-option" data-option="loan_info">Loan Info</button>
+            <button class="chat-option" data-option="contact_help">Contact Support</button>
+        </div>
+    </div>
+</div>
